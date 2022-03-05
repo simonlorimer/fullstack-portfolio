@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Simon Lorimer <simonlorimerdev@gmail.com>",
+  "author": "Simon Lorimer",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
