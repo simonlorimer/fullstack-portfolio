@@ -18,7 +18,6 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        <br/>
         <span>Bad Design</span> Shouts at you.<br/> <span>Good Design</span> is the silent seller.
       </h2>
       <div className="app__profiles">
