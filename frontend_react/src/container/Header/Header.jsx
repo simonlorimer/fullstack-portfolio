@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
+import { AppWrap } from '../../wrapper';
 import './Header.scss';
 
 const scaleVariants = {
@@ -38,7 +39,6 @@ const Header = () => {
         </div>
       </div>
     </motion.div>
-
     <motion.div
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 1, delayChildren: 0.5 }}
@@ -47,13 +47,12 @@ const Header = () => {
       <img src={images.profile} alt="profile_bg" />
       <motion.img
         whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 4, ease: 'easeInOut' }}
+        transition={{ duration: 2, ease: 'easeInOut' }}
         src={images.circle}
         alt="profile_circle"
         className="overlay_circle"
       />
     </motion.div>
-
     <motion.div
       variants={scaleVariants}
       whileInView={scaleVariants.whileInView}
@@ -69,4 +68,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export default AppWrap(Header, 'home');
