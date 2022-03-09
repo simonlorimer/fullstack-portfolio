@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
-import { AppWrap, MotionWrap } from '../../wrapper';
+import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
 
@@ -34,6 +34,7 @@ const Work = () => {
 
   return (
     <>
+      <br/>
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
       <div className="app__work-filter">
         {['UI/UX', 'Web App', 'Node.js', 'React.js', 'Python', 'All'].map((item, index) => (
@@ -87,7 +88,6 @@ const Work = () => {
                 </a>
               </motion.div>
             </div>
-
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
