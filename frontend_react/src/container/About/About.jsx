@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { images } from '../../constants';
 import { urlFor, client } from '../../client';
 import './About.scss';
@@ -19,7 +19,7 @@ const About = () => {
     <>
       <h2 className="head-text">
         <br/>
-        <span>Bad Design</span> Shouts at you.<br/> <span>Good Design</span> is the silent seller.
+        I have a <span>wide</span> range of <span>Experience</span>
       </h2>
       <div className="app__profiles">
         {abouts.map((about, index) => (
@@ -40,4 +40,8 @@ const About = () => {
   );
 }
 
-export default AppWrap(About, 'about');
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg'
+  );
